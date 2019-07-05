@@ -1,0 +1,40 @@
+{
+    "name": "laraone/themes",
+    "description": "Themes.",
+    "keywords": ["themes"],
+    "license": "MIT",
+    "homepage": "https://github.com/laraone/themes.git",
+    "authors": [
+        {
+            "name": "Giannis Gasteratos",
+            "email": "igasteratos@gmail.com"
+        }
+    ],	
+    "require": {
+        "illuminate/contracts": "5.6.*|5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.4",
+        "phpunit/phpunit": "~7.0"
+    },
+    "suggest": {
+        "orchestra/asset" : "Use '@css' and '@js' in Blade files"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Laraone\\Themes\\"        : "src/",
+            "Laraone\\Themes\\Tests\\" : "tests/"            
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laraone\\Themes\\themeServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "Laraone\\Themes\\Facades\\Theme"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
